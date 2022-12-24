@@ -80,15 +80,18 @@ for (int i = 0; i < M; i++){
 WriteLine();
 WriteLine("Ведите номера первого столбца :");int left = Convert.ToInt32(Console.ReadLine())-1;
 WriteLine("Ведите номера второго столбца :");int right = Convert.ToInt32(Console.ReadLine())-1;
-if (left > N || right > N) { WriteLine("Ошибка ввода!!!!!!!"); }
-else {
-    if (left > right) { int tmp = left; left = right; right = tmp; }
+if (left > N)  { WriteLine("Ошибка ввода!!!!!!!"); }//почему то условие ИЛИ не срабатывало пришлось нагородить  ifов
+    else { 
+        if ( (right > N)) { WriteLine("Ошибка ввода!!!!!!!"); }
+        else {
+            if (left > right) { int tmp = left; left = right; right = tmp; }
 
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
-            if (j == left) { int tmp = matrix_2d[i, j]; matrix_2d[i, j] = matrix_2d[i,  right]; matrix_2d[i,  right] = tmp; }
-            Write($"{matrix_2d[i, j]} ");
-        }WriteLine();
-    }
+            for (int i = 0; i < M; i++) {
+                for (int j = 0; j < N; j++) {
+                    if (j == left) { int tmp = matrix_2d[i, j]; matrix_2d[i, j] = matrix_2d[i,  right]; matrix_2d[i,  right] = tmp; }
+                    Write($"{matrix_2d[i, j]} ");
+                }WriteLine();
+            }
+        }
 }
 //foreach(int i  in matrix_2d) { Write($"{i} " ); }

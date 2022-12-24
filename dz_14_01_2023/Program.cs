@@ -80,7 +80,7 @@ for (int i = 0; i < M; i++){
 WriteLine();
 WriteLine("Ведите номера первого столбца :");int left = Convert.ToInt32(Console.ReadLine())-1;
 WriteLine("Ведите номера второго столбца :");int right = Convert.ToInt32(Console.ReadLine())-1;
-if ((left > N)||(right > N))  { WriteLine("Ошибка ввода!!!!!!!"); }//почему то условие ИЛИ не срабатывало пришлось нагородить  ifов
+if ((left > N)||(right > N))  { WriteLine("Ошибка ввода!!!!!!!"); }
     
         else {
             if (left > right) { int tmp = left; left = right; right = tmp; }

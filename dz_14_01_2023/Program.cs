@@ -94,7 +94,8 @@ if ((left > N)||(right > N))  { WriteLine("Ошибка ввода!!!!!!!"); }
                         matrix_2d[i, right] = tmp;
                      }
                     //Write($"{matrix_2d[i, j]} ");
-                }WriteLine();
+                }
+                WriteLine();
             }
         }
 

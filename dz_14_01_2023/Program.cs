@@ -72,10 +72,11 @@ const int N = 4;
 int[,] matrix_2d =new int[M,N] { {2,5,8,13 }, {-21,34,-55,89} };
 ///foreach (int i in matrix_2d) { Write($"{i} "); }
 for (int i = 0; i < M; i++){
-    for (int j = 0; j < N; j++){Write($" {matrix_2d[i, j]} ");}WriteLine();
+    for (int j = 0; j < N; j++){
+        Write($" {matrix_2d[i, j]} ");
+    }
+    WriteLine();
 }
-
-
 
 WriteLine();
 WriteLine("Ведите номера первого столбца :");int left = Convert.ToInt32(Console.ReadLine())-1;
@@ -87,9 +88,22 @@ if ((left > N)||(right > N))  { WriteLine("Ошибка ввода!!!!!!!"); }
 
             for (int i = 0; i < M; i++) {
                 for (int j = 0; j < N; j++) {
-                    if (j == left) { int tmp = matrix_2d[i, j]; matrix_2d[i, j] = matrix_2d[i,  right]; matrix_2d[i,  right] = tmp; }
-                    Write($"{matrix_2d[i, j]} ");
+                    if (j == left) { 
+                        int tmp = matrix_2d[i, j]; 
+                        matrix_2d[i, j] = matrix_2d[i, right];
+                        matrix_2d[i, right] = tmp;
+                     }
+                    //Write($"{matrix_2d[i, j]} ");
                 }WriteLine();
             }
         }
+
+for (int i = 0; i < M; i++)
+{
+    for (int j = 0; j < N; j++)
+    {
+        Write($" {matrix_2d[i, j]} ");
+    }
+    WriteLine();
+}
 

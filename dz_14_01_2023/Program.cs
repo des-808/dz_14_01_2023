@@ -80,9 +80,8 @@ for (int i = 0; i < M; i++){
 WriteLine();
 WriteLine("Ведите номера первого столбца :");int left = Convert.ToInt32(Console.ReadLine())-1;
 WriteLine("Ведите номера второго столбца :");int right = Convert.ToInt32(Console.ReadLine())-1;
-if (left > N)  { WriteLine("Ошибка ввода!!!!!!!"); }//почему то условие ИЛИ не срабатывало пришлось нагородить  ifов
-    else { 
-        if ( (right > N)) { WriteLine("Ошибка ввода!!!!!!!"); }
+if ((left > N)||(right > N))  { WriteLine("Ошибка ввода!!!!!!!"); }//почему то условие ИЛИ не срабатывало пришлось нагородить  ifов
+    
         else {
             if (left > right) { int tmp = left; left = right; right = tmp; }
 
@@ -93,5 +92,4 @@ if (left > N)  { WriteLine("Ошибка ввода!!!!!!!"); }//почему т
                 }WriteLine();
             }
         }
-}
-//foreach(int i  in matrix_2d) { Write($"{i} " ); }
+
